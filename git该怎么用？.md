@@ -16,6 +16,13 @@ git config --global user.email "975514665@qq.com"
 git config --global user.name "amazinday"
 ```
 
+- 最核心的操作：
+```bash
+git add .
+git commit -m "2025-11-28" 
+git push origin main
+```
+
 - 常用操作：
 ```bash
 # 添加所有改动的文件到暂存区(只包括改动和新增的文件)
@@ -38,9 +45,20 @@ git reset
 # 查看提交历史
 git log
 
-#修改最后一次提交
+# 修改最后一次提交(还没push)
 git commmit --amend -m "新信息" # 修改提交信息
 
 git add missing_file.txt
 git commit --ament --no-edit # 补上文件
+
+# 修改已push的文件信息
+git commmit --amend -m "新信息"
+git push --force origin main # 强制推送
+
+# 设置上游，以后可以简写
+git push -u origin main
+git push # 之后
+
+# 拉取到本地
+git pull origin main
 ```
